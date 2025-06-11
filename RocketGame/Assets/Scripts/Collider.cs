@@ -3,31 +3,30 @@ using UnityEngine.SceneManagement;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    Collider c;
-    SceneManager manager;
+    private Collider thisCollider;
+    private Collider otherCollider; // Cache for the collided object
+
     void Start()
     {
-        c = GetComponent<Collider>();
-        manager = new SceneManager();
+        thisCollider = GetComponent<Collider>();
     }
 
-    void OnCollisionEnter(Collision c)
+    void OnCollisionEnter(Collision collision)
     {
-        CollideAction(c.collider);
-        SceneManager.LoadScene(0);
+        otherCollider = collision.collider; 
+        Invoke("CollideAction", 20f);       
+        SceneManager.LoadScene(0);        
     }
 
-    private void CollideAction(Collider c)
+    private void CollideAction()
     {
-        if (c != null)
+        if (otherCollider != null)
         {
-            Debug.Log("This is object tag: " + c.tag);
+            Debug.Log("This is object tag: " + otherCollider.tag);
         }
         else
         {
             Debug.LogWarning("Collider is null!");
         }
     }
-
-
 }
