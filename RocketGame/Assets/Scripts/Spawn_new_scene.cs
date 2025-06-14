@@ -6,9 +6,12 @@ public class Spawn_new_scene : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Trigger next scene");
+        int index = GameManager.instance.getcurrinstance;
+        index++;
+        Debug.Log("Trigger next scene : " + index);
 
-        SceneManager.LoadScene(1);
+        
+        SceneManager.LoadScene(index% SceneManager.sceneCountInBuildSettings);
 
     }
 

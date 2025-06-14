@@ -1,0 +1,7 @@
+*.csproj
+Logs
+UserSettings
+Temp
+*.sln
+Library
+/Desktop/password-managerx

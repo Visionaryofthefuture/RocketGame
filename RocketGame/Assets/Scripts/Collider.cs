@@ -14,19 +14,16 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         otherCollider = collision.collider; 
-        Invoke("CollideAction", 20f);       
-        SceneManager.LoadScene(0);        
+        Invoke("CollideAction", 2f);       
     }
 
     private void CollideAction()
     {
-        if (otherCollider != null)
+        if (otherCollider != null && otherCollider.tag == "Player")
         {
-            Debug.Log("This is object tag: " + otherCollider.tag);
-        }
-        else
-        {
-            Debug.LogWarning("Collider is null!");
+            int index = GameManager.instance.getcurrinstance;
+            Debug.Log("Changing to index : " +  index);
+            SceneManager.LoadScene(index);
         }
     }
 }
