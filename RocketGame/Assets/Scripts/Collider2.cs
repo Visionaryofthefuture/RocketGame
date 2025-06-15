@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class Collider : MonoBehaviour
+public class Collider2 : MonoBehaviour
 {
     private GameObject otherObject; // More accurate name
     [SerializeField] AudioClip audio;
@@ -23,7 +23,7 @@ public class Collider : MonoBehaviour
                 playerInput.DisableInput();
             else
                 Debug.LogWarning("PlayerInput component not found on Player.");
-            AudioSource audioSource = GetComponentInParent<AudioSource>();
+            AudioSource audioSource = GetComponent<AudioSource>();
             audioSource.PlayOneShot(audio);
             
 

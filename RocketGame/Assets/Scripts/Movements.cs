@@ -4,14 +4,13 @@ using UnityEngine.InputSystem;
 public class Movements : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the
-    AudioSource Thrust_sound;
+    public AudioSource Thrust_sound;
     [SerializeField] InputAction thrust;
     [SerializeField] InputAction rotate;
     [SerializeField] Transform player1;
     // Update is called once per frame
     [SerializeField] Rigidbody player;
     [SerializeField] float RotationStrength;
-    Vector3 rotation = new Vector3(0, 0, 1);
     //    [SerializeField] int y;
     private void Start()
     {
@@ -23,6 +22,16 @@ public class Movements : MonoBehaviour
     {
         thrust.Enable(); // enables the the Input Action (it could be a space on keyboard or left stick on console)
         rotate.Enable(); // enable the rotate Input Action
+    }
+
+    public void DisableInput()
+    {
+        thrust.Disable();
+        rotate.Disable();
+        player.isKinematic = false;
+    
+        player.freezeRotation = false;
+        player.useGravity = true;
     }
     void FixedUpdate()
     {

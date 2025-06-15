@@ -102,9 +102,13 @@ PrefabInstance:
       value: 12.598
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 953fe30c7b4888b418f3afc42ceefee8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d912cc1176048394487fd293205a2e20, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 953fe30c7b4888b418f3afc42ceefee8, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 76b1a399f49d8a34c969523505e31e6d, type: 2}
+      objectReference: {fileID: 2100000, guid: d912cc1176048394487fd293205a2e20, type: 2}
     - target: {fileID: 919132149155446097, guid: 953fe30c7b4888b418f3afc42ceefee8, type: 3}
       propertyPath: m_Name
       value: Fighter_04_Detail_1_Blue
@@ -620,9 +624,13 @@ PrefabInstance:
       value: -3.336
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 33bc3880cd97be34ab3c482af7bb304e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9604980ddd16d5b7880f995b4e405faf, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 33bc3880cd97be34ab3c482af7bb304e, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 76b1a399f49d8a34c969523505e31e6d, type: 2}
+      objectReference: {fileID: 2100000, guid: 9604980ddd16d5b7880f995b4e405faf, type: 2}
     - target: {fileID: 919132149155446097, guid: 33bc3880cd97be34ab3c482af7bb304e, type: 3}
       propertyPath: m_Name
       value: Fighter_02_Thruster
