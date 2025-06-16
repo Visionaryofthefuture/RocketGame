@@ -10,9 +10,10 @@ public class Collider : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        GameObject Surface = GetComponent<GameObject>();
         GameObject collidedObject = collision.gameObject;
 
-        if (collidedObject.CompareTag("Player"))
+        if (collidedObject.CompareTag("Player") && Surface.CompareTag("Obstacle"))
         {
             otherObject = collidedObject;
 
